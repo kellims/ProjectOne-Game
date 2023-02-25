@@ -1,14 +1,38 @@
-header {
-    background-color: rgb(95, 133, 117);
 
+body {
+    background-color: rgba(246,246,245,255);
+}
+
+
+
+header {
+    background-color: rgba(151,193,170,255);
+    color: rgba(102,130,114,255);
+    padding: 1rem;
 }
 
 footer {
-    background-color: rgb(95, 133, 117);
+    background-color: rgba(151,193,170,255);
     text-align: center;
     color: whitesmoke;
 }
 
 .scoreboard {
-    background-color: rgb(180, 196, 36);
+    background-color: rgba(235,241,163,255);
+    padding: .5rem .5rem;
+    margin: 1rem;
+}
+
+.newDeck {
+    background-color: rgba(235,241,163,255);
+    color: rgba(102,130,114,255);
+    border: none;
+    padding: .5rem 2rem;
+    margin: 1rem;
+}
+.newDeck {border-radius: 12px;}
+
+.game {
+    position: relative;
+    left: 10rem;
 }
