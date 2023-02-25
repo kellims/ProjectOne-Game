@@ -23,7 +23,7 @@
 
 ## Wireframe
 ![image](warwireframe.png)
-* https://www.figma.com/file/hVTL3Y8uZZBpxBi7RgfLAn/Untitled?node-id=0%3A1&t=qB7SB4QD53rGGLeE-1
+https://www.figma.com/file/hVTL3Y8uZZBpxBi7RgfLAn/Untitled?node-id=0%3A1&t=qB7SB4QD53rGGLeE-1
 
 
 ## Additional Features to Consider
