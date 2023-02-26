@@ -83,5 +83,5 @@ button {border-radius: 12px;}
   }
 
   .draw {
-    align-content: flex-end; 
+    flex-direction: row
   }
