@@ -22,11 +22,13 @@
 
 
 ## Wireframe
+
 ![image](warwireframe.png)
 https://www.figma.com/file/hVTL3Y8uZZBpxBi7RgfLAn/Untitled?node-id=0%3A1&t=qB7SB4QD53rGGLeE-1
 
 
 ## Additional Features to Consider
+
 * In the case of a tie, building in the ability to break the tie with additional cards being drawn.
 * Win conditions based on one player collecting the entire deck, instead of points per round. 
 * The ability to store multiple wins after x amount of games, or 'best of x'.

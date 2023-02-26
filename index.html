@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./game.js" defer></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <title>Game Of War</title>
 </head>
 <body>
@@ -15,8 +18,14 @@
     <div class="game">
         <div class="scoreboard">
             <h3 class="innerScoreboard">Score Board
-                <p class="playerOneScore">Player 1:</p>
-                <p class="computerScore">Computer:</p>
+                <div class="players">
+                    <p class="playerOneScore">Player 1:
+                        <div class="scoreText playerScore">default</div>
+                    </p>
+                    <p class="computerScore">Computer:
+                        <div class="scoreText computerScore">default</div>
+                    </p>
+                </div>
             </h3>
             <button type="button" class="newDeck">New Deck</button>
 

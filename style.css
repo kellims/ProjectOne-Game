@@ -1,31 +1,39 @@
 
 body {
+    font-family: 'Italiana', serif;
     background-color: rgba(246,246,245,255);
 }
 
 
 
 header {
-    background-color: rgba(151,193,170,255);
-    color: rgba(102,130,114,255);
+    background-color: rgba(102,130,114,255);
+    color: rgba(151,193,170,255);
     padding: 1rem;
 }
 
 footer {
-    background-color: rgba(151,193,170,255);
+    background-color: rgba(102,130,114,255);
+    color: rgba(151,193,170,255);
     text-align: center;
-    color: whitesmoke;
 }
 
 
 .innerScoreboard {
-    
     background-color: rgba(235,241,163,255);
+    color: rgba(102,130,114,255);
     padding: .5rem .5rem;
     margin: .5rem;
+    
+}
+
+.scoreText {
+    background-color: #f0f3c9;
+    padding: .3rem;
 }
 
 button {
+    font-family: 'Italiana', serif;
     background-color: rgba(235,241,163,255);
     color: rgba(102,130,114,255);
     border: none;
@@ -35,6 +43,9 @@ button {border-radius: 12px;}
 
 .newDeck {
     margin: 1rem;
+}
+.cardsRemaining {
+    color: rgba(102,130,114,255);
 }
 
 
@@ -51,7 +62,7 @@ button {border-radius: 12px;}
 
     width: 5em;
     height: 7em;
-    background-color: rgba(102,130,114,255);
+    background-color: rgba(151,193,170,255);
     box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
     border-radius: 0.25em;
     
