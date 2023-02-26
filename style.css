@@ -9,21 +9,22 @@ body {
 header {
     background-color: rgba(102,130,114,255);
     color: rgba(151,193,170,255);
-    padding: 1rem;
+    padding: 1rem 3rem;
 }
 
 footer {
     background-color: rgba(102,130,114,255);
     color: rgba(151,193,170,255);
     text-align: center;
+    bottom: 0;
 }
 
 
 .innerScoreboard {
     background-color: rgba(235,241,163,255);
     color: rgba(102,130,114,255);
+    text-align: center;
     padding: .5rem .5rem;
-    margin: .5rem;
     
 }
 
@@ -50,25 +51,37 @@ button {border-radius: 12px;}
 
 
 .game {
-    
     position: relative;
     left: 10rem;
-    
+    display: flex;
 }
 
 .card {
     display: inline-block;
     vertical-align: middle;
-
+    
     width: 5em;
     height: 7em;
     background-color: rgba(151,193,170,255);
     box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
     border-radius: 0.25em;
+
+    background-color: (#97c1aa, 57%, 40%);
+    background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+    repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+    repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
+
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
     
   }
 
   .computersCards {
     position: relative;
     
+  }
+
+  .draw {
+    align-content: flex-end; 
   }
