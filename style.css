@@ -17,22 +17,47 @@ footer {
     color: whitesmoke;
 }
 
-.scoreboard {
+
+.innerScoreboard {
+    
     background-color: rgba(235,241,163,255);
     padding: .5rem .5rem;
-    margin: 1rem;
+    margin: .5rem;
 }
 
-.newDeck {
+button {
     background-color: rgba(235,241,163,255);
     color: rgba(102,130,114,255);
     border: none;
     padding: .5rem 2rem;
+}
+button {border-radius: 12px;}
+
+.newDeck {
     margin: 1rem;
 }
-.newDeck {border-radius: 12px;}
+
 
 .game {
+    
     position: relative;
     left: 10rem;
+    
 }
+
+.card {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 5em;
+    height: 7em;
+    background-color: rgba(102,130,114,255);
+    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
+    
+  }
+
+  .computersCards {
+    position: relative;
+    
+  }
