@@ -20,17 +20,20 @@ footer {
 }
 
 
+
+
 .innerScoreboard {
     background-color: rgba(235,241,163,255);
     color: rgba(102,130,114,255);
     text-align: center;
-    padding: .5rem .5rem;
+    padding: 2rem 2rem;
     
 }
 
 .scoreText {
     background-color: #f0f3c9;
     padding: .3rem;
+    
 }
 
 button {
@@ -54,34 +57,61 @@ button {border-radius: 12px;}
     position: relative;
     left: 10rem;
     display: flex;
+    
 }
 
-.card {
-    display: inline-block;
+.gamePlay {
+    display: flex;
+    margin: 2em 7em;
+    text-align: center;
+}
+
+h3 {
+    margin: 2em 10em 0em 0em;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    margin: 4em 0em;
+    position: absolute;
+}
+
+
+
+.playersCards {
+    display: flex;
     vertical-align: middle;
-    
-    width: 5em;
-    height: 7em;
+    position: relative;
+    justify-content: space-between;
+    width: 7.5em;
+    height: 10em;
+    margin: 2em 5em;
     background-color: rgba(151,193,170,255);
     box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
     border-radius: 0.25em;
-
     background-color: (#97c1aa, 57%, 40%);
-    background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-    repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-    repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
-
-    display: flex;
-    justify-content: space-between;
-    margin: 1em;
     
   }
 
   .computersCards {
+    display: flex;
+    vertical-align: middle;
     position: relative;
-    
+    justify-content: space-between;
+    width: 7.5em;
+    height: 10em;
+    margin: 2em 5em;
+    background-color: rgba(151,193,170,255);
+    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
+    background-color: (#97c1aa, 57%, 40%);
   }
 
-  .draw {
-    flex-direction: row
+
+  .gameButton {
+    position: absolute;
+    padding: .5rem 2rem;
+    margin: 20em 0em 0em 0em;
   }
+  
