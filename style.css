@@ -80,8 +80,6 @@ h3 {
     position: absolute;
 }
 
-
-
 .playersCards {
     display: flex;
     vertical-align: middle;
@@ -94,9 +92,9 @@ h3 {
     box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
     border-radius: 0.25em;
     background-color: (#97c1aa, 57%, 40%);
-    
   }
 
+  
   .computersCards {
     display: flex;
     vertical-align: middle;
