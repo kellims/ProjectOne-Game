@@ -4,8 +4,6 @@ body {
     background-color: rgba(246,246,245,255);
 }
 
-
-
 header {
     background-color: rgba(102,130,114,255);
     color: rgba(151,193,170,255);
@@ -19,24 +17,17 @@ footer {
     bottom: 0;
 }
 
-.general {
-    display: grid;
-
-}
-
 
 .innerScoreboard {
     background-color: rgba(235,241,163,255);
     color: rgba(102,130,114,255);
     text-align: center;
-    padding: 2rem 2rem;
-    
+    padding: 2rem 2rem;    
 }
 
 .scoreText {
     background-color: #f0f3c9;
-    padding: .3rem;
-    
+    padding: .3rem;    
 }
 
 button {
@@ -48,8 +39,10 @@ button {
 }
 button {border-radius: 12px;}
 
+
 .newDeck {
     margin: 1rem;
+
 }
 .cardsRemaining {
     color: rgba(102,130,114,255);
@@ -59,8 +52,7 @@ button {border-radius: 12px;}
 .game {
     position: relative;
     left: 10rem;
-    display: flex;
-    
+    display: flex;   
 }
 
 .gamePlay {
@@ -80,33 +72,29 @@ h3 {
     position: absolute;
 }
 
+.card {
+    width: 7.5em;
+    height: 10em;
+    margin: 2em 5em;
+    background-color: rgba(151,193,170,255);
+    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
+    background-color: (#97c1aa, 57%, 40%);
+}
+
 .playersCards {
     display: flex;
     vertical-align: middle;
     position: relative;
     justify-content: space-between;
-    width: 7.5em;
-    height: 10em;
-    margin: 2em 5em;
-    background-color: rgba(151,193,170,255);
-    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
-    border-radius: 0.25em;
-    background-color: (#97c1aa, 57%, 40%);
   }
 
-  
+
   .computersCards {
     display: flex;
     vertical-align: middle;
     position: relative;
     justify-content: space-between;
-    width: 7.5em;
-    height: 10em;
-    margin: 2em 5em;
-    background-color: rgba(151,193,170,255);
-    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.15);
-    border-radius: 0.25em;
-    background-color: (#97c1aa, 57%, 40%);
   }
 
 

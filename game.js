@@ -13,62 +13,133 @@
 // let computerScore = document.querySelector('.computerScore');
 // console.log(computerScore);
 
-//Create Deck of Cards
-const suits = ["spades", "diamonds", "clubs", "hearts"];
+//Make each player an Object - since I'm not adding players to the game, I don't need a class
+let playerOne = {
+    name: "Player One",
+    cards: []
+}
+
+let playerTwo = {
+    name: "Computer",
+    cards: []
+}
+console.log(playerOne);
+console.log(playerTwo);
+
+
+
+//Create classes to store my cards (tip from Office Hours)
+const suits = ["♠", "♦", "♣", "♥"];
 const values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 
-let deck = [];
-
-for(let i = 0; i < suits.length; i++) {
-    for(let j = 0; j < values.length; j++) {
-        let card = {Value: values[j], Suit: suits[i]};
-        deck.push(card);
+class deckOfCards {
+    constructor(cards = newDeck()) {
+        this.cards = cards
     }
 }
-console.log(deck);
 
-//Function to Shuffle Deck and deal half to each player
+class card {
+    constructor(suit, value){
+        this.suit = suit
+        this.value = value
+        //add HTML Images for each card.
+    }
+}
+
+//Creating a new deck using the .flatMap & .map to iterate through array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap
+function newDeck() {
+    return suits.flatMap(suit => {
+        return values.map(value => {
+            return new card(suit, value)
+        })
+    })
+}
+const deck = new deckOfCards()
+console.log(deck.cards)
+
+
+//making shuffle function work with cards as a class
 function shuffleDeck() {
-    for (let i = deck.length - 1; i > 0; i --) {
+    for (let i = deck.cards.length - 1; i > 0; i --) {
         let j = Math.floor(Math.random() * i);
-        let temp = deck[i];
-        deck[i] = deck[j];
-        deck[j] = temp;
-    // } function deal() {
-    //     
-    //     }
+        let temp = deck.cards[i];
+        deck.cards[i] = deck.cards[j];
+        deck.cards[j] = temp;
     }
+    
+    // call dealCards function inside
+     }
 
-}
+shuffleDeck();
+console.log(deck.cards);
 
-console.log();
 
-//Deal Cards out to players - half of the deck to each
-// function dealCards() {
-//     return deck.pop();
+
+// for(let i = 0; i < suits.length; i++) {
+//     for(let j = 0; j < values.length; j++) {
+//         let card = {Value: values[j], Suit: suits[i]};
+//         deck.push(card);
+//     }
+
 // }
+// console.log(deck);
 
 
-// let card = dealCards(deck);
-// console.log(card);
+// //Function to Shuffle Deck (Can't get my for loop to work when inside a function)
+
+// function shuffleDeck() {
+//     for (let i = deck.length - 1; i > 0; i --) {
+//         let j = Math.floor(Math.random() * i);
+//         let temp = deck[i];
+//         deck[i] = deck[j];
+//         deck[j] = temp;
+//     }
+    
+//     // call dealCards function inside
+//      }
+
+// shuffleDeck();
+// console.log(deck);
+
+// //Function to Deal half of the cards to each player
+// function dealCards() {
+//     let arr = [deck];
+//     let half = Math.ceil(deck.length / 2);
+//     let playerOneCards = arr.splice(0, half);
+//     let playerTwoCards = arr.splice(-half);
+//  }
+// dealCards(deck);
+// console.log(`Player One Cards are: ${playerOneCards}`);
+// console.log(`Computers Cards are: ${playerTwoCards}`)
 
 
-//Function to Draw card from each deck
+
+// //Deal Cards out to players - half of the deck to each
+// // function dealCards() {
+// //     return deck.pop();
+// // }
+// // let card = dealCards(deck);
+// // console.log(card);
 
 
-//Create Players
-let playerOne;
-let playerTwo;
+// //Function to Draw card from each deck
 
 
-// //Define Winning Conditions
 
 
-//Define Tie Conditions
+// // //Define Winning Conditions
+// // function winner() {
+// //     const winningConditions = [
+// //         if 
+// //     ]
+// // }
 
-//Create Even Listeners
 
-//Create Funtion which updates Scoreboard
+// //Define Tie Conditions
 
-//Extended Features: Create input for user to enter their own name, which would automatically update Player 1
+// //Create Even Listeners
+
+// //Create Funtion which updates Scoreboard
+
+// //Extended Features: Create input for user to enter their own name, which would automatically update Player 1
 
