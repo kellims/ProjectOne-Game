@@ -1,27 +1,25 @@
 
 //Define HTML Elements
-// let playersCard = document.querySelector('.playersCards');
+let playersCard = document.querySelector('.playersCards');
 // console.log(playersCard);
 // let playerOne = document.querySelector('.player1');
 // console.log(playerOne);
-// let computersCard = document.querySelector('.computersCards');
+let computersCard = document.querySelector('.computersCards');
 // console.log(computersCard);
 // let computer = document.querySelector('.computer');
 // console.log(computer);
-// let playerScore = document.querySelector('.playerScore');
+let playerScore = document.querySelector('.playerScore');
 // console.log(playerScore);
-// let computerScore = document.querySelector('.computerScore');
+let computerScore = document.querySelector('.computerScore');
 // console.log(computerScore);
 
 //Make each player an Object - since I'm not adding players to the game, I don't need a class
 let playerOne = {
     name: "Player One",
-    // cards: []
 }
 
 let playerTwo = {
     name: "Computer",
-    // cards: []
 }
 console.log(playerOne);
 console.log(playerTwo);
@@ -44,17 +42,15 @@ class card {
         this.value = value
     }
     // // add HTML Images for each card.
-    // function htmlForCard(){
-    //     let newCard = document.createElement('div');
-    //     newCard.innerText = this.suit
-    //     newCard.classList.add("card");
-    //     newCard.dataset.value = `${this.value} ${this.suit}`
-    //     return htmlForCard();
-    // }
+    htmlForCard(){
+        let newCard = document.createElement('div');
+        newCard.innerText = this.suit
+        newCard.classList.add("cards");
+        newCard.dataset.value = `${this.value} ${this.suit}`
+        return newCard
+    }
 }
 
-// let playersCards = document.querySelector('.playersCards');
-// playersCards.appendChild(deck.cards[0].htmlForCard())
 
 //Creating a new deck using the .flatMap & .map to iterate through array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap
 function newDeck() {
@@ -76,9 +72,7 @@ function shuffleDeck() {
         deck.cards[i] = deck.cards[j];
         deck.cards[j] = temp;
     }
-    
-    // call dealCards function inside
-     }
+}
 
 // shuffleDeck();
 // console.log(deck);
@@ -92,19 +86,25 @@ let playerTwoCards
 //Game Function
 function playGame () {
     let deck = new deckOfCards;
-    // deck.shuffleDeck()
+    shuffleDeck()
     let half = Math.ceil(deck.cards.length / 2);
     let playerOneCards = deck.cards.splice(0, half);
     let playerTwoCards = deck.cards.splice(-half);
 
-    console.log(`Player One Cards are: ${playerOneCards}`);
-    console.log(`Computers Cards are: ${playerTwoCards}`);
+    // console.log(`Player One Cards are: ${playerOneCards}`);
+    // console.log(`Computers Cards are: ${playerTwoCards}`);
+
+    function cardsRemaining () {
+        playerScore.innerText = playerOneCards
+        computerScore.innerText = playerTwoCards
+    }
 }
 playGame()
 
+computersCard.appendChild(deck.cards[0].htmlForCard())
+playersCard.appendChild(deck.cards[0].htmlForCard())
 
-
-
+//Function to update Cards Remaining Totals
 
 
 
