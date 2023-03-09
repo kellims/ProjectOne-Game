@@ -1,5 +1,8 @@
 # Game Title - Game Of War 
 
+## Getting Started
+* https://kellims.github.io/Project_One-Game_Of_War/
+
 ## User Experience
 
 * User will compete in the card game War, against the computer.
@@ -26,6 +29,10 @@
 ![image](Wireframe.png)
 https://www.figma.com/file/hVTL3Y8uZZBpxBi7RgfLAn/Untitled?node-id=0%3A1&t=qB7SB4QD53rGGLeE-1
 
+## Technologies Used:
+* HTML
+* CSS
+* JavaScript
 
 ## Additional Features to Consider
 
