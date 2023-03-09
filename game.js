@@ -1,16 +1,11 @@
-//Define HTML Elements
+
 let playersCard = document.querySelector('.playersCards');
 let computersCard = document.querySelector('.computersCards');
 let playerScore = document.querySelector('.playerScore');
 let computerScore = document.querySelector('.computerScore');
 let gameAlerts = document.querySelector('.alerts');
-
 let newGame = document.querySelector('.newDeck');
 let drawCard = document.querySelector('.draw');
-// let playerOne = document.querySelector('.player1');
-
-
-//Make each player an Object - since I'm not adding players to the game, I don't need a class
 let playerOne = {
     name: "Player One",
 }
@@ -20,11 +15,8 @@ let playerTwo = {
 
 
 
-// Create classes to store my cards (tip from Office Hours)
 const suits = ["♠", "♦", "♣", "♥"];
 const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-
-
 
 class deckOfCards {
     constructor() {
@@ -43,7 +35,6 @@ class card {
         this.value = value;
         this.number = number;
     }
-    // // add HTML Images for each card.
     htmlForCard(){
         let newCard = document.createElement('div');
         newCard.innerText = this.suit
@@ -64,8 +55,6 @@ function shuffleDeck(deck) {
 }
 
 
-
-//Event Listener to begin Game Function
 newGame.addEventListener("click", playGameOfWar);
 
 function playGameOfWar () {
@@ -87,14 +76,12 @@ function playGameOfWar () {
 
 
 
-    //function to track the remaining cards in each players deck
     function cardsRemaining () {
         playerScore.innerText = playerOneCards.length
         computerScore.innerText = playerTwoCards.length  
     
     }
     
-    //Event Listener for 'Draw' button to reveal new cards for each player
     drawCard.addEventListener("click", drawCards); 
     
     function drawCards() {
@@ -111,22 +98,19 @@ function playGameOfWar () {
 
         }
      }
+
     function winningConditions() {
         let removedPlayerOneCard = playerOneCards.shift();
         let removedPlayerTwoCard = playerTwoCards.shift();
         if(playerOneCards[0].number > playerTwoCards[0].number) {
-                //Assign both cards to player's deck
                 playerOneCards.push(removedPlayerOneCard, removedPlayerTwoCard);
                 gameAlerts.innerText = "Player 1 wins";
             } else if(playerTwoCards[0].number > playerOneCards[0].number) {
-                //Assign both cards to computer's deck
                 playerTwoCards.push(removedPlayerTwoCard, removedPlayerOneCard);
                 gameAlerts.innerText = "Computer wins";
-            // } else if(playerTwoCards[0].number === playerOnesCards[0].number) {
-            //     //Play War extended feature function
-
          } cardsRemaining();
     }
+    
     function endOfGame(){
         if(playerOneCards.length > playerTwoCards.length) {
             gameAlerts.innerText = "Player 1 Wins the War";
