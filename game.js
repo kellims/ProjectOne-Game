@@ -105,9 +105,9 @@ function playGameOfWar () {
             computersCard.appendChild(playerTwoCards[0].htmlForCard())
             playersCard.appendChild(playerOneCards[0].htmlForCard()) 
         } else if(playerOneCards.length === 0) {
-            //end game function
+            endOfGame()
         } else if(playerTwoCards.length === 0) {
-            //end game function
+            endOfGame()
 
         }
      }
@@ -127,9 +127,21 @@ function playGameOfWar () {
 
          } cardsRemaining();
     }
-    // function endOfGame(){
-
-    // }
+    function endOfGame(){
+        if(playerOneCards.length > playerTwoCards.length) {
+            gameAlerts.innerText = "Player 1 Wins the War";
+            computersCard.removeChild(computersCard.firstChild);
+            playersCard.removeChild(playersCard.firstChild);
+            computersCard.appendChild(playerTwoCards[0].htmlForCard())
+            playersCard.appendChild(playerOneCards[0].htmlForCard())
+        }else if(playerTwoCards.length > playerOneCards.length) {
+            gameAlerts.innerText = "The Computer Wins the War";
+            computersCard.removeChild(computersCard.firstChild);
+            playersCard.removeChild(playersCard.firstChild);
+            computersCard.appendChild(playerTwoCards[0].htmlForCard())
+            playersCard.appendChild(playerOneCards[0].htmlForCard())
+        }
+    }
         
            computersCard.appendChild(playerTwoCards[0].htmlForCard())
            playersCard.appendChild(playerOneCards[0].htmlForCard())             
