@@ -104,10 +104,3 @@ playGame()
 computersCard.appendChild(deck.cards[0].htmlForCard())
 playersCard.appendChild(deck.cards[0].htmlForCard())
 
-//Function to update Cards Remaining Totals
-
-
-
-
-
-
