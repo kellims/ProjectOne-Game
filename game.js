@@ -14,9 +14,9 @@ let playerTwo = {
 }
 
 
-
 const suits = ["♠", "♦", "♣", "♥"];
 const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
 
 class deckOfCards {
     constructor() {
@@ -28,6 +28,7 @@ class deckOfCards {
         } 
     }
 }
+
 
 class card {
     constructor(suit, value, number){
@@ -44,18 +45,19 @@ class card {
     }
 }
 
+
 function shuffleDeck(deck) {
     for (let i = deck.cards.length - 1; i > 0; i --) {
         let j = Math.floor(Math.random() * i);
         let temp = deck.cards[i];
         deck.cards[i] = deck.cards[j];
-        deck.cards[j] = temp;
-        
+        deck.cards[j] = temp;   
     } return deck
 }
 
 
 newGame.addEventListener("click", playGameOfWar);
+
 
 function playGameOfWar () {
     let deck = new deckOfCards();
@@ -63,11 +65,11 @@ function playGameOfWar () {
     let half = Math.ceil(deck.cards.length / 2);
     let playerOneCards = deck.cards.slice(0, half);
     let playerTwoCards = deck.cards.slice(half);
-    console.log(playerOneCards)
-    console.log(playerTwoCards)
+
 
     cardsRemaining()
     
+
     if(playerOneCards[0].number > playerTwoCards[0].number) {
         gameAlerts.innerText = "Player 1 wins";
     } else if(playerTwoCards[0].number > playerOneCards[0].number) {
@@ -75,15 +77,15 @@ function playGameOfWar () {
     }
 
 
-
     function cardsRemaining () {
         playerScore.innerText = playerOneCards.length
         computerScore.innerText = playerTwoCards.length  
-    
     }
     
+
     drawCard.addEventListener("click", drawCards); 
     
+
     function drawCards() {
         winningConditions()
         if(playerOneCards.length !== 0 && playerTwoCards !== 0){
@@ -95,9 +97,9 @@ function playGameOfWar () {
             endOfGame()
         } else if(playerTwoCards.length === 0) {
             endOfGame()
-
         }
      }
+
 
     function winningConditions() {
         let removedPlayerOneCard = playerOneCards.shift();
@@ -108,9 +110,14 @@ function playGameOfWar () {
             } else if(playerTwoCards[0].number > playerOneCards[0].number) {
                 playerTwoCards.push(removedPlayerTwoCard, removedPlayerOneCard);
                 gameAlerts.innerText = "Computer wins";
-         } cardsRemaining();
+            } else if(playerTwoCards[0].number === playerOneCards[0].number) {
+                gameAlerts.innerText = "It's a tie";
+                playerTwoCards.push(removedPlayerTwoCard);
+                playerOneCards.push(removedPlayerOneCard);
+            } cardsRemaining();
     }
-    
+
+
     function endOfGame(){
         if(playerOneCards.length > playerTwoCards.length) {
             gameAlerts.innerText = "Player 1 Wins the War";
@@ -126,7 +133,7 @@ function playGameOfWar () {
             playersCard.appendChild(playerOneCards[0].htmlForCard())
         }
     }
-        
+    
            computersCard.appendChild(playerTwoCards[0].htmlForCard())
            playersCard.appendChild(playerOneCards[0].htmlForCard())             
 }
