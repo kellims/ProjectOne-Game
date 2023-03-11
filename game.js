@@ -71,9 +71,9 @@ function playGameOfWar () {
     
 
     if(playerOneCards[0].number > playerTwoCards[0].number) {
-        gameAlerts.innerText = "Player 1 wins";
+        gameAlerts.innerText = "★ Player 1 wins ☆";
     } else if(playerTwoCards[0].number > playerOneCards[0].number) {
-        gameAlerts.innerText = "Computer wins";
+        gameAlerts.innerText = "☆ Computer wins ☆";
     }
 
 
@@ -106,12 +106,12 @@ function playGameOfWar () {
         let removedPlayerTwoCard = playerTwoCards.shift();
         if(playerOneCards[0].number > playerTwoCards[0].number) {
                 playerOneCards.push(removedPlayerOneCard, removedPlayerTwoCard);
-                gameAlerts.innerText = "Player 1 wins";
+                gameAlerts.innerText = "★ Player 1 wins ★";
             } else if(playerTwoCards[0].number > playerOneCards[0].number) {
                 playerTwoCards.push(removedPlayerTwoCard, removedPlayerOneCard);
-                gameAlerts.innerText = "Computer wins";
+                gameAlerts.innerText = "☆ Computer wins ☆";
             } else if(playerTwoCards[0].number === playerOneCards[0].number) {
-                gameAlerts.innerText = "It's a tie";
+                gameAlerts.innerText = "★ It's a tie ☆";
                 playerTwoCards.push(removedPlayerTwoCard);
                 playerOneCards.push(removedPlayerOneCard);
             } cardsRemaining();
@@ -120,13 +120,13 @@ function playGameOfWar () {
 
     function endOfGame(){
         if(playerOneCards.length > playerTwoCards.length) {
-            gameAlerts.innerText = "Player 1 Wins the War";
+            gameAlerts.innerText = "★ Player 1 Wins the War ★";
             computersCard.removeChild(computersCard.firstChild);
             playersCard.removeChild(playersCard.firstChild);
             computersCard.appendChild(playerTwoCards[0].htmlForCard());
             playersCard.appendChild(playerOneCards[0].htmlForCard());
         }else if(playerTwoCards.length > playerOneCards.length) {
-            gameAlerts.innerText = "The Computer Wins the War";
+            gameAlerts.innerText = "☆ The Computer Wins the War ☆";
             computersCard.removeChild(computersCard.firstChild);
             playersCard.removeChild(playersCard.firstChild);
             computersCard.appendChild(playerTwoCards[0].htmlForCard());
