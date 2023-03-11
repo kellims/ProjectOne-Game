@@ -71,7 +71,7 @@ function playGameOfWar () {
     
 
     if(playerOneCards[0].number > playerTwoCards[0].number) {
-        gameAlerts.innerText = "★ Player 1 wins ☆";
+        gameAlerts.innerText = "★ Player 1 wins ★";
     } else if(playerTwoCards[0].number > playerOneCards[0].number) {
         gameAlerts.innerText = "☆ Computer wins ☆";
     }
