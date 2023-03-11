@@ -38,10 +38,10 @@ class card {
     }
     htmlForCard(){
         let newCard = document.createElement('div');
-        newCard.innerText = this.suit
+        newCard.innerText = this.suit;
         newCard.classList.add("cards");
         newCard.dataset.value = `${this.value} ${this.suit}`
-        return newCard
+        return newCard;
     }
 }
 
@@ -52,7 +52,7 @@ function shuffleDeck(deck) {
         let temp = deck.cards[i];
         deck.cards[i] = deck.cards[j];
         deck.cards[j] = temp;   
-    } return deck
+    } return deck;
 }
 
 
@@ -61,13 +61,13 @@ newGame.addEventListener("click", playGameOfWar);
 
 function playGameOfWar () {
     let deck = new deckOfCards();
-    shuffleDeck(deck)
+    shuffleDeck(deck);
     let half = Math.ceil(deck.cards.length / 2);
     let playerOneCards = deck.cards.slice(0, half);
     let playerTwoCards = deck.cards.slice(half);
 
 
-    cardsRemaining()
+    cardsRemaining();
     
 
     if(playerOneCards[0].number > playerTwoCards[0].number) {
@@ -78,8 +78,8 @@ function playGameOfWar () {
 
 
     function cardsRemaining () {
-        playerScore.innerText = playerOneCards.length
-        computerScore.innerText = playerTwoCards.length  
+        playerScore.innerText = playerOneCards.length;
+        computerScore.innerText = playerTwoCards.length;  
     }
     
 
@@ -91,12 +91,12 @@ function playGameOfWar () {
         if(playerOneCards.length !== 0 && playerTwoCards !== 0){
             computersCard.removeChild(computersCard.firstChild);
             playersCard.removeChild(playersCard.firstChild);
-            computersCard.appendChild(playerTwoCards[0].htmlForCard())
-            playersCard.appendChild(playerOneCards[0].htmlForCard()) 
+            computersCard.appendChild(playerTwoCards[0].htmlForCard());
+            playersCard.appendChild(playerOneCards[0].htmlForCard()); 
         } else if(playerOneCards.length === 0) {
-            endOfGame()
+            endOfGame();
         } else if(playerTwoCards.length === 0) {
-            endOfGame()
+            endOfGame();
         }
      }
 
@@ -123,17 +123,17 @@ function playGameOfWar () {
             gameAlerts.innerText = "Player 1 Wins the War";
             computersCard.removeChild(computersCard.firstChild);
             playersCard.removeChild(playersCard.firstChild);
-            computersCard.appendChild(playerTwoCards[0].htmlForCard())
-            playersCard.appendChild(playerOneCards[0].htmlForCard())
+            computersCard.appendChild(playerTwoCards[0].htmlForCard());
+            playersCard.appendChild(playerOneCards[0].htmlForCard());
         }else if(playerTwoCards.length > playerOneCards.length) {
             gameAlerts.innerText = "The Computer Wins the War";
             computersCard.removeChild(computersCard.firstChild);
             playersCard.removeChild(playersCard.firstChild);
-            computersCard.appendChild(playerTwoCards[0].htmlForCard())
-            playersCard.appendChild(playerOneCards[0].htmlForCard())
+            computersCard.appendChild(playerTwoCards[0].htmlForCard());
+            playersCard.appendChild(playerOneCards[0].htmlForCard());
         }
     }
-    
-           computersCard.appendChild(playerTwoCards[0].htmlForCard())
-           playersCard.appendChild(playerOneCards[0].htmlForCard())             
+
+           computersCard.appendChild(playerTwoCards[0].htmlForCard());
+           playersCard.appendChild(playerOneCards[0].htmlForCard());          
 }
