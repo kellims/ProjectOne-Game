@@ -34,11 +34,11 @@ https://www.figma.com/file/hVTL3Y8uZZBpxBi7RgfLAn/Untitled?node-id=0%3A1&t=qB7SB
 * CSS
 * JavaScript
 
-## Additional Features to Consider
+## Next Steps
 
-* In the case of a tie, building in the ability to break the tie with additional cards being drawn.
-* Win conditions based on one player collecting the entire deck, instead of points per round. 
+* In the case of a tie, building in the ability to break the tie with additional cards being drawn. 
 * The ability to store multiple wins after x amount of games, or 'best of x'.
 * Build into the project an ability to play different card games.
 * Clickable pop-up which contains the rules of 'War'
 * Require player to 'confirm' their selection when choosing the 'New Deck' button.
+* Ability to let player enter their name, which then updates 'Player 1'
